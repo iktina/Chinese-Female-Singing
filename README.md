@@ -13,13 +13,12 @@ For the service to work correctly, you need to make sure that the number of note
 
 ## How does it work?
 The user must provide the following inputs in order to start the service and get a response:
-The user must provide the following input to start the service and receive a response:
 
 1. MIDI file with single notes for each time period. (for details see the requirements for the midi file)
 2. Text in the form of Chinese characters with pause tokens. (See information about pauses for more details)
 3. Minimum time in seconds for a meaningful pause. (default 0.25 sec)
 
-At the output, the user will receive an audio file in mp3 format.
+At the output, the user will receive an audio file in wav format.
 ### Midi file requirements
 
 * Notes should not overlap, i.e. only the part that should be sung should be played. You can first get rid of unnecessary notes in any midi editor.
