@@ -4,6 +4,11 @@
 The service receives a midi file, text for singing and minimum significant time in seconds between two adjacent notes for pauses and uses them as an input for a trained model.
 ## What’s the point?
 The service synthesizes a singing voice in Chinese based on the given text and notes. The service receives a midi file with notes to sing, the text to be sung and the minimum time in seconds to take into account pauses (the latter is optional). The service converts the input midi file, extracting information about notes, pauses between them and the duration of each note and pause, and then synthesizes the singing voice using machine learning methods.
+
+## Important information
+
+For the service to work correctly, you need to make sure that the number of notes + the number of pauses in the midi file is exactly the number of hieroglyphs, taking into account the pause tokens.
+
 ## Model details:
 
 ## How does it work?
