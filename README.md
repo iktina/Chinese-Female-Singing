@@ -27,7 +27,7 @@ At the output, the user will receive an audio file in wav format.
 * Don't forget to specify the path to save the output audio
 * Good results can be obtained on the 3rd or 4th octave when singing
 
-### Pause information
+### Information about pauses
 
 There are 2 types of pauses: AP and SP. AP is recommended to be used only at the beginning of singing because the breath is voiced. SP is a more natural pause. If you are not sure what you need, it is best to always use the SP pause.
 
