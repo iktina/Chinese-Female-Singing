@@ -28,7 +28,7 @@ For the service to work correctly, you need to make sure that the number of note
 
 ## Model details:
 
-First, data is preprocessed on the server side, where notes and information about their duration and pauses between are extracted. The Chinese characters are then converted into phonemes. Thus, there will be 1 note for each phoneme (and for a pause in the text, there is a pause in the audio). Then this information is fed to the input of the neural model. We use DiffSinger, an acoustic model for SVS based on the diffusion probabilistic model. DiffSinger is a parameterized Markov chain that iteratively converts the noise into mel-spectrogram conditioned on the music score.To further improve the voice quality and speed up inference, we introduce a shallow diffusion mechanism to make better use of the prior knowledge learned by the simple loss. 
+First, data is preprocessed on the server side, where notes and information about their duration and pauses between are extracted. The Chinese characters are then converted into phonemes. Thus, there will be 1 note for each phoneme (and for a pause in the text, there is a pause in the audio). Then this information is fed to the input of the neural model. We use DiffSinger, an acoustic model for SVS based on the diffusion probabilistic model. DiffSinger is a parameterized Markov chain that iteratively converts the noise into mel-spectrogram conditioned on the music score. To further improve voice quality and speed up output, a shallow diffusion mechanism is used.
 
 ## How does it work?
 The user must provide the following inputs in order to start the service and get a response:
