@@ -33,8 +33,11 @@ The client has to receive one mono 22050 Hz audio.
 Python code example how to convert a json string to the audio file:
 
 > json = eval(result.output_audio)
+> 
 > s = int(json["frequency"])
+> 
 > bytess = str.encode(json["bytes"][2:-1])
+> 
 > wavfile.write("output_servise_ZH_singing.wav", s, np.frombuffer(base64.b64decode(bytess), dtype=np.float32).astype(np.int16))
 
 
