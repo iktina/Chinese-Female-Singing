@@ -31,15 +31,12 @@ These bytes were received as follows:
 The client has to receive one mono 22050 Hz audio.
 
 Python code example how to convert a json string to the audio file:
-
-> json = eval(result.output_audio)
-> 
-> s = int(json["frequency"])
-> 
-> bytess = str.encode(json["bytes"][2:-1])
-> 
-> wavfile.write("output_servise_ZH_singing.wav", s, np.frombuffer(base64.b64decode(bytess), dtype=np.float32).astype(np.int16))
-
+```html
+json = eval(result.output_audio)
+s = int(json["frequency"])
+bytess = str.encode(json["bytes"][2:-1])
+wavfile.write("output_servise_ZH_singing.wav", s, np.frombuffer(base64.b64decode(bytess), dtype=np.float32).astype(np.int16))
+```
 
 ## Important information
 
@@ -72,3 +69,5 @@ There are 2 types of pauses: AP and SP. AP is recommended to be used only at the
 ## What to expect from this service?
 
 Audio track with singing in mono 22050 Hz.
+
+
