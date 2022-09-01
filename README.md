@@ -20,6 +20,8 @@ These bytes were received as follows:
 
 > bytes = base64.b64encode(au)
 
+The client has to receive one mono 22050 Hz audio.
+
 ## Important information
 
 For the service to work correctly, you need to make sure that the number of notes + the number of pauses in the midi file is exactly the number of hieroglyphs, taking into account the pause tokens.
