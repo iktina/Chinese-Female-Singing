@@ -21,7 +21,7 @@ Example:
 
 > {"frequency": "22050", "bytes": "b'U5D0wFdXEcH9oCrBnIs8wRdu4sAxR+XA460KwGbkDD75nAM/V5k0v0u2GsBM0z3AN'"}
 
-"b'U5D0wFdXEcH9oCrBnIs8wRdu4sAxR+XA460KwGbkDD75nAM/V5k0v0u2GsBM0z3AN'" - bytes
+"b'U5D0wFdXEcH9oCrBnIs8wRdu4sAxR+XA460KwGbkDD75nAM/V5k0v0u2GsBM0z3AN'" - string of bytes
  
 The output is a string in the form of a dictionary. It contains the frequency of the audio and the bytes for the audio waveform.
 These bytes were received as follows:
