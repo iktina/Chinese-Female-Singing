@@ -2,8 +2,23 @@
 
 ## Welcome
 The service receives a midi file, text for singing and minimum significant time in seconds between two adjacent notes for pauses and uses them as an input for a trained model.
+
 ## What’s the point?
 The service synthesizes a singing voice in Chinese based on the given text and notes. The service receives a midi file with notes to sing, the text to be sung and the minimum time in seconds to take into account pauses (the latter is optional). The service converts the input midi file, extracting information about notes, pauses between them and the duration of each note and pause, and then synthesizes the singing voice using machine learning methods.
+
+### Output:
+
+The service returns the string dson. It contains information about the frequency of the output audio file (22050 Hz always) and bytes.
+Example: 
+
+> {"frequency": "22050", "bytes": "b'U5D0wFdXEcH9oCrBnIs8wRdu4sAxR+XA460KwGbkDD75nAM/V5k0v0u2GsBM0z3AN'"}
+
+"b'U5D0wFdXEcH9oCrBnIs8wRdu4sAxR+XA460KwGbkDD75nAM/V5k0v0u2GsBM0z3AN'" - bytes
+ 
+The output is a string in the form of a dictionary. It contains the frequency of the audio and the bytes for the audio waveform.
+These bytes were received as follows:
+
+> bytes = base64.b64encode(au)
 
 ## Important information
 
