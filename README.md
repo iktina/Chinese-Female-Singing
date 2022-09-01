@@ -6,6 +6,14 @@ The service receives a midi file, text for singing and minimum significant time 
 ## What’s the point?
 The service synthesizes a singing voice in Chinese based on the given text and notes. The service receives a midi file with notes to sing, the text to be sung and the minimum time in seconds to take into account pauses (the latter is optional). The service converts the input midi file, extracting information about notes, pauses between them and the duration of each note and pause, and then synthesizes the singing voice using machine learning methods.
 
+### Input:
+
+1. Singing text with pause tokens (if there are significant pauses in the midi file). Example: 
+
+> SP祝你生日快乐SP祝你生日快乐
+
+3. MIDI file with single notes. Example: 'Happy-Birthday.mid'
+
 ### Output:
 
 The service returns the string dson. It contains information about the frequency of the output audio file (22050 Hz always) and bytes.
