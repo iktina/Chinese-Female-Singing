@@ -30,6 +30,14 @@ These bytes were received as follows:
 
 The client has to receive one mono 22050 Hz audio.
 
+Python code example how to convert a json string to the audio file:
+
+> json = eval(result.output_audio)
+> s = int(json["frequency"])
+> bytess = str.encode(json["bytes"][2:-1])
+> wavfile.write("output_servise_ZH_singing.wav", s, np.frombuffer(base64.b64decode(bytess), dtype=np.float32).astype(np.int16))
+
+
 ## Important information
 
 For the service to work correctly, you need to make sure that the number of notes + the number of pauses in the midi file is exactly the number of hieroglyphs, taking into account the pause tokens.
