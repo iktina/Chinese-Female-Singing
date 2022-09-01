@@ -59,3 +59,5 @@ At the output, the user will receive an audio file in wav format.
 There are 2 types of pauses: AP and SP. AP is recommended to be used only at the beginning of singing because the breath is voiced. SP is a more natural pause. If you are not sure what you need, it is best to always use the SP pause.
 
 ## What to expect from this service?
+
+Audio track with singing in mono 22050 Hz.
