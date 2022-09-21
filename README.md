@@ -16,27 +16,13 @@ The service synthesizes a singing voice in Chinese based on the given text and n
 
 ### Output:
 
-The service returns the string dson. It contains information about the frequency of the output audio file (22050 Hz always) and bytes.
+The bytes.
+
 Example: 
 
-> {"frequency": "22050", "bytes": "b'U5D0wFdXEcH9oCrBnIs8wRdu4sAxR+XA460KwGbkDD75nAM/V5k0v0u2GsBM0z3AN'"}
+> RIFF$\x95\x05\x00WAVEfmt \x10\x00\x00\x00
 
-"b'U5D0wFdXEcH9oCrBnIs8wRdu4sAxR+XA460KwGbkDD75nAM/V5k0v0u2GsBM0z3AN'" - string of bytes
- 
-The output is a string in the form of a dictionary. It contains the frequency of the audio and the bytes for the audio waveform.
-These bytes were received as follows:
-
-> bytes = base64.b64encode(au)
-
-The client has to receive one mono 22050 Hz audio.
-
-Python code example how to convert a json string to the audio file:
-```html
-json = eval(result.output_audio)
-s = int(json["frequency"])
-bytess = str.encode(json["bytes"][2:-1])
-wavfile.write("output_servise_ZH_singing.wav", s, np.frombuffer(base64.b64decode(bytess), dtype=np.float32).astype(np.int16))
-```
+After writing bytes to a wav file, an audio file with a frequency of 22050 will be obtained.
 
 ## Important information
 
