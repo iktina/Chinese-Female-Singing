@@ -9,7 +9,7 @@ message Query {
 }
 
 message Answer {
-  string output_audio = 1;
+  bytes output_audio = 1;
 }
 
 service singingZH {
